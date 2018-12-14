@@ -25,7 +25,7 @@ public class GroundSpawner : MonoBehaviour {
       
         if (enemyDistances > (this.transform.position.x - LastItem.transform.position.x))
             return;
-            RotZ = Random.Range(-4f, 5f);
+            RotZ = Random.Range(-1f, 2f);
             PosY = Random.Range(-5.13f,-6f );
             SpawnGround();    
 	}
