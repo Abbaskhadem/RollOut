@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TheWheel : MonoBehaviour
 {
-    public float Speed = 5f;
+    public static float Speed = 5f;
     public Rigidbody2D RbCharkh;
     void Update()
     {
