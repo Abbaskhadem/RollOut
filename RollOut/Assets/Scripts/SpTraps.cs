@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpTraps : MonoBehaviour {
     public GameObject Tr1;
     public GameObject Tr2;
+    float nextspawn = 0.0f;
     public GameObject SpawnerPoint;
     Vector2 whereTospawn;
     float roundX;
@@ -15,9 +16,13 @@ public class SpTraps : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        roundX = Random.Range(-1.66f, 2);
-        whereTospawn = new Vector2(roundX, transform.position.y);
-        Instantiate(Tr1, SpawnerPoint.transform.position, Quaternion.identity);
-		
+
+        if (Time.time > nextspawn)
+        {
+
+            roundX = Random.Range(-1.66f, 2);
+            whereTospawn = new Vector2(roundX, transform.position.y);
+            Instantiate(Tr1, SpawnerPoint.transform.position, Quaternion.identity);
+        }
 	}
 }
