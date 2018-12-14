@@ -19,27 +19,19 @@ public class GroundSpawner : MonoBehaviour {
 
 	void Start () {
         SpawnGround();
-		
 	}
 	
 	void Update () {
       
         if (enemyDistances > (this.transform.position.x - LastItem.transform.position.x))
             return;
-            RotZ = Random.Range(-6f, 6f);
-            PosY = Random.Range(-2.7f, -4.2f);
-            SpawnGround();
-
-        
+            RotZ = Random.Range(-4f, 5f);
+            PosY = Random.Range(-5.13f,-6f );
+            SpawnGround();    
 	}
     public void SpawnGround()
     {
-
-
-
-
-        LastItem = (GameObject)Instantiate(Ground1, SpawnerPoint.transform.position, Quaternion.Euler(new Vector3(0, 0, RotZ)));
-
+       LastItem = (GameObject)Instantiate(Ground1, SpawnerPoint.transform.position, Quaternion.Euler(new Vector3(0, 0, RotZ)));
     }
    
 }
