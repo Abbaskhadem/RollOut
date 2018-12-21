@@ -15,17 +15,20 @@ public class ScoringSys : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        myTimer = Time.deltaTime + myTimer;
-       // myScore = Time.deltaTime + myTimer;
-        if (myTimer >= 0.0001)
+        if(Rocks.LoseGame==false)
         {
-           // myScore += 1;
-           // myTimer = 0;
-            myScore = Time.time *5+ myTimer;
-            Score.text = myScore.ToString("f0");
-            
+            myTimer = Time.deltaTime + myTimer;
+            // myScore = Time.deltaTime + myTimer;
+            if (myTimer >= 0.0001)
+            {
+                // myScore += 1;
+                // myTimer = 0;
+                myScore = Time.time * 5 + myTimer;
+                Score.text = myScore.ToString("f0");
+
+            }
         }
+   
 
     }
 }
