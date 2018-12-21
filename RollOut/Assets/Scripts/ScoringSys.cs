@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoringSys : MonoBehaviour {
     public Text Score;
      float myTimer;
-     float myScore ;
+    public static float myScore ;
     // Use this for initialization
     void Start () {
        // myScore += 1;
