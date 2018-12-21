@@ -6,24 +6,21 @@ public class TheWheel : MonoBehaviour
 {
     public static float Speed =5;
     public Rigidbody2D RbCharkh;
+   public float timer = 5f;
+    public float TotalTime = 0f;
     Vector3 lastPos;
     
     void Update()
     {
-
-
-        // transform.Translate(Vector2.right * Speed * (Mathf.Sqrt(transform.position.x / 100) + 1));
-        // 
         
-       // RbCharkh.velocity = new Vector2(Speed, 0f);
 
-        if (Time.deltaTime < Speed)
+        if (TotalTime < timer)
         {
-            Speed += (Time.deltaTime);
-            
+            Speed += 0.01f;
+            TotalTime = 0;
 
         }
-
+        TotalTime += (Time.deltaTime + TotalTime);
         RbCharkh.velocity = new Vector2(Speed, 0f);
         //Speed += Time.deltaTime;
         // transform.Translate(Speed, 0, 0);
