@@ -24,7 +24,8 @@ public class GroundSpawner : MonoBehaviour {
 	}
 	
 	void Update () {
-      
+        if (GameManager.LoseGame == true)
+            return;
         if (enemyDistances > (this.transform.position.x - LastItem.transform.position.x))
             return;
             RotZ = Random.Range(-1f, 2f);

@@ -20,13 +20,10 @@ public class TheWheel : MonoBehaviour
             TotalTime = 0;
 
         }
-        if(Rocks.LoseGame==false)
+        if(GameManager.LoseGame==false)
         {
             RbCharkh.velocity = new Vector2(Speed, 0f);
         }
-
-        //Speed += Time.deltaTime;
-        // transform.Translate(Speed, 0, 0);
     }
 }
 

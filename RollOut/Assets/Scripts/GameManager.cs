@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour {
-    public static float RotateSpeed=-3f;
-
+public class GameManager : MonoBehaviour {
+    public static bool LoseGame = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,10 +11,6 @@ public class Rotate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Rocks.LoseGame==false)
-        {
-            transform.Rotate(0, 0, RotateSpeed);
-        }
-
+		
 	}
 }

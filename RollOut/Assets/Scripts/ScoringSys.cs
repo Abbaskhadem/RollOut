@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class ScoringSys : MonoBehaviour {
     public Text Score;
-     float myTimer;
+    float myTimer;
     public static float myScore ;
+    public static float Extra;
     // Use this for initialization
     void Start () {
        // myScore += 1;
@@ -15,15 +16,12 @@ public class ScoringSys : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Rocks.LoseGame==false)
+        if(GameManager.LoseGame==false)
         {
             myTimer = Time.deltaTime + myTimer;
-            // myScore = Time.deltaTime + myTimer;
             if (myTimer >= 0.0001)
             {
-                // myScore += 1;
-                // myTimer = 0;
-                myScore = Time.time * 5 + myTimer;
+                myScore = myTimer+ Extra;
                 Score.text = myScore.ToString("f0");
 
             }

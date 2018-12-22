@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 26786399}
   - component: {fileID: 26786398}
   - component: {fileID: 26786402}
-  - component: {fileID: 26786401}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -192,19 +191,6 @@ Transform:
   m_Father: {fileID: 1307704666}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &26786401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 26786397}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0c17961283eb244498c69ebdb9d3feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  RbDorbin: {fileID: 26786402}
 --- !u!50 &26786402
 Rigidbody2D:
   serializedVersion: 4
@@ -740,7 +726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.90700006, y: 0.79200006}
   m_AnchorMax: {x: 1, y: 0.9292478}
-  m_AnchoredPosition: {x: 5.9999847, y: 4.850006}
+  m_AnchoredPosition: {x: 6, y: 4.850006}
   m_SizeDelta: {x: 14.7, y: 9.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &832459668
@@ -1624,7 +1610,7 @@ GameObject:
   - component: {fileID: 1425348765}
   - component: {fileID: 1425348762}
   m_Layer: 0
-  m_Name: Untitled-1
+  m_Name: TheRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2229,9 +2215,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2126349258}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0152, y: 0.01, z: 0}
-  m_LocalScale: {x: 1.0281589, y: 0.99646443, z: 0.74773306}
+  m_LocalScale: {x: 1.0281589, y: 0.99646443, z: 0}
   m_Children: []
   m_Father: {fileID: 685629989}
   m_RootOrder: 0
@@ -2244,9 +2230,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2126349258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a86e305337d5cdf44bddb8456880ef8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 302490aedbe1dde4ca596ff5785829e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RotationSpeed: -3
 --- !u!212 &2126349261
 SpriteRenderer:
   m_ObjectHideFlags: 0

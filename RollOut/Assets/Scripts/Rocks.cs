@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Rocks : MonoBehaviour {
-    public static bool LoseGame=false;
-
     public void OnMouseDown()
     {
-        ScoringSys.myScore += 100;
+        ScoringSys.Extra += 100;
         GetComponent<BoxCollider2D>().enabled = false;
         Destroy(gameObject, 5);
     }
@@ -15,7 +14,7 @@ public class Rocks : MonoBehaviour {
     {
         if (col.gameObject)
         {
-            LoseGame = true;
+            GameManager.LoseGame = true;
         }
     }
 }
