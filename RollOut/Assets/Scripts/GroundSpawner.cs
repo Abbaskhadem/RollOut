@@ -20,11 +20,12 @@ public class GroundSpawner : MonoBehaviour {
 
 
 	void Start () {
-        SpawnGround();
+            SpawnGround();
+
 	}
 	
 	void Update () {
-        if (GameManager.LoseGame == true)
+        if (GameManager.LoseGame == true || GameManager.Go==false || GameManager.GameStarted==false)
             return;
         if (enemyDistances > (this.transform.position.x - LastItem.transform.position.x))
             return;

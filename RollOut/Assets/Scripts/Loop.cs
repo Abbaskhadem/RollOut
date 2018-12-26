@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Loop : MonoBehaviour {
-    Vector3 _cameraLastPos;
+   public Vector3 _cameraLastPos;
 	// Use this for initialization
 	void Start () {
 		

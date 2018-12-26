@@ -12,13 +12,13 @@ public class TheWheel : MonoBehaviour
     
     void Update()
     {
-
+        if (GameManager.Go == false)
+            return;
         TotalTime = Time.deltaTime + TotalTime;
         if (TotalTime >= timer)
         {
-            Speed += 1f;
+            Speed += 0.3f;
             TotalTime = 0;
-
         }
         if(GameManager.LoseGame==false)
         {
