@@ -6,7 +6,7 @@ public class swiping : MonoBehaviour {
     public float maxtime;
     public float minswipedist;
 
-
+    public Animator Drop;
     float starttime;
     float endtime;
     float swipeDistans;
@@ -65,6 +65,7 @@ public class swiping : MonoBehaviour {
 
            else if (distans.x < 0)
             {
+                Drop.SetBool("Active", true);
                 Debug.Log("leftt horizental swipe");
             }
 
