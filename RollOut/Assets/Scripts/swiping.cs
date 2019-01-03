@@ -5,7 +5,7 @@ using UnityEngine;
 public class swiping : MonoBehaviour {
     public float maxtime;
     public float minswipedist;
-
+    public float timer01;
     public Animator Drop;
     float starttime;
     float endtime;
@@ -23,7 +23,13 @@ public class swiping : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Input.touchCount>0)
+        timer01 = Time.deltaTime + timer01;
+        //if(timer01>=0.1f)
+        //{
+        //    timer01 = 0f;
+        //    Drop.SetBool("Active", false);
+        //}
+        if (Input.touchCount>0 && Activator.Activated==true)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -65,7 +71,7 @@ public class swiping : MonoBehaviour {
 
            else if (distans.x < 0)
             {
-                Drop.SetBool("Active", true);
+                FindObjectOfType<Animator>().SetBool("Active", true);
                 Debug.Log("leftt horizental swipe");
             }
 
@@ -92,5 +98,6 @@ public class swiping : MonoBehaviour {
 
            // Debug.Log("vertical");
         }
+        
     }
 }
