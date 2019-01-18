@@ -12,7 +12,6 @@ public class swiping : MonoBehaviour {
     float swipeDistans;
     float swipeTime;
 
-
     Vector3 startpos;
     Vector3 endpos;
 
@@ -29,7 +28,7 @@ public class swiping : MonoBehaviour {
         //    timer01 = 0f;
         //    Drop.SetBool("Active", false);
         //}
-        if (Input.touchCount>0 && Activator.Activated==true)
+        if (Input.touchCount>0)
         {
             Touch touch = Input.GetTouch(0);
 
