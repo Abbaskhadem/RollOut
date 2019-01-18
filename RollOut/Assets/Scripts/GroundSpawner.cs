@@ -14,8 +14,10 @@ public class GroundSpawner : MonoBehaviour {
     GameObject currentTree;
     //Vector
     Vector2 TreePos;
+    Vector2 RockPos;
     Vector2 currentTreePos;
     Vector2 SwampPos;
+    Vector2 SwampRockPos;
     Vector2 currentSwampPos;
     Vector2 SpawnPos;
     Vector3 Rotation;
@@ -26,13 +28,16 @@ public class GroundSpawner : MonoBehaviour {
     float PosY;
     float RotZ;
     float a, b;
-    
+    float c, d;
+
     public float enemyDistances;
 
 
 	void Start () {
             SpawnGround();
-	}
+        currentTree = Instantiate(Traps[Temp], SpawnerTrap.transform.position, Quaternion.identity);
+        RockPos = currentTree.transform.position;
+    }
 	
 	void Update () {
         if (GameManager.LoseGame == true || GameManager.Go==false || GameManager.GameStarted==false)
@@ -54,10 +59,11 @@ public class GroundSpawner : MonoBehaviour {
         Temp = Random.Range(0, 2);
         if (Temp == 1)
         {
-            Debug.Log("4");
+            Debug.Log("abiii");
+
         currentTree = Instantiate(Traps[Temp], SpawnerTrap.transform.position, Quaternion.identity);
        
-            Debug.Log("1");
+            Debug.Log("abi2");
             
 
 
@@ -71,17 +77,21 @@ public class GroundSpawner : MonoBehaviour {
             Debug.Log("raft tosh");
             TreePos = currentTree.transform.position;
             a = TreePos.x - 1.60f;
-            b = TreePos.y - 0.88f;
+            b = TreePos.y - 0.4f;
             SwampPos = new Vector2(a, b);
             // TreePos = new Vector2(transform.position.x, transform.position.y);
-            Debug.Log("3");
+            Debug.Log("sabz");
             Instantiate(Traps[2], SwampPos, Quaternion.identity);
 
         }
         else
         {
+            RockPos = currentTree.transform.position;
+            c = RockPos.x+5f;
+            d = RockPos.y+0.6f ;
+            SwampRockPos = new Vector2(c, d);
             Debug.Log("4");
-            Instantiate(Traps[Temp], SpawnerTrap.transform.position, Quaternion.identity);
+            Instantiate(Traps[Temp], SwampRockPos, Quaternion.identity);
         }
     }
 }
